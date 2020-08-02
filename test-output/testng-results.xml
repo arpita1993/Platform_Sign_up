@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="14350" started-at="2020-08-02T16:08:18Z" finished-at="2020-08-02T16:08:32Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="14350" started-at="2020-08-02T16:08:18Z" finished-at="2020-08-02T16:08:32Z">
+      <class name="com.saplab.page.automatePoj.SignUpPageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.saplab.page.automatePoj.SignUpPageTest@7e9a5fbe]" name="setup" is-config="true" duration-ms="11775" started-at="2020-08-02T21:38:18Z" finished-at="2020-08-02T21:38:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="sucessfulRegister()[pri:0, instance:com.saplab.page.automatePoj.SignUpPageTest@7e9a5fbe]" name="sucessfulRegister" duration-ms="1863" started-at="2020-08-02T21:38:30Z" finished-at="2020-08-02T21:38:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sucessfulRegister -->
+        <test-method status="PASS" signature="closeDriver()[pri:0, instance:com.saplab.page.automatePoj.SignUpPageTest@7e9a5fbe]" name="closeDriver" is-config="true" duration-ms="694" started-at="2020-08-02T21:38:32Z" finished-at="2020-08-02T21:38:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+      </class> <!-- com.saplab.page.automatePoj.SignUpPageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

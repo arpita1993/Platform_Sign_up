@@ -1,0 +1,52 @@
+package com.saplab.page.automatePoj;
+
+import static org.testng.Assert.assertEquals;
+
+import java.time.Duration;
+
+import org.eclipse.jetty.io.ManagedSelector.SelectorUpdate;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+public class SignUpPageTest {
+	
+	
+	
+	SignUpPage page;
+	
+    
+	@BeforeMethod
+	public void setup()
+	{
+		HomePage homePage = new HomePage();
+		page=homePage.openSignUpPage();
+	}
+	
+	@Test
+	public void testSuccessfullRegistration()
+	{
+		page.fillUpSignUpPageFields("arpita", "mohanty", "abcd@gmail.com", "933@arpi", "933@arpi");
+		WebDriverWait wait  =  new WebDriverWait(page.driver, Duration.ofSeconds(8));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".ids-heading-1")));
+		
+		String expected="Thank you for registering with SAP Conversational AI";
+		String actual=page.driver.findElement(By.cssSelector(".ids-heading-1")).getText();
+		assertEquals(page.driver.findElement(By.cssSelector(".ids-heading-1")).isDisplayed(), true);
+		assertEquals(actual, expected);
+	}
+	
+	@AfterMethod
+	 public void closeDriver()
+	 {
+		page.driver.quit();
+	 }
+	
+	
+	
+}
