@@ -26,7 +26,7 @@ public class HomePageTest {
 	@Test
 	public void homeUrl()
 	{
-		String expectedhomeUrl="https://cai.tools.sap";
+		String expectedhomeUrl="https://cai.tools.sap/";
 		String actualhomeUrl=homePage.driver.getCurrentUrl();
 		Assert.assertEquals(actualhomeUrl, expectedhomeUrl);
 	}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Sign Up Tests">
+	<test name="Home Page Tests">
+		<classes>
+			<class name="com.saplab.page.automatePoj.HomePageTest" />
+		</classes>
+	</test>
+	<test name="Sign Up Test">
+		<classes>
+			<class name="com.saplab.page.automatePoj.SignUpPageTest" />
+		</classes>
+	</test>
+</suite> 

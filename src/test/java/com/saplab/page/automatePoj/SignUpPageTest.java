@@ -41,6 +41,29 @@ public class SignUpPageTest {
 		assertEquals(actual, expected);
 	}
 	
+	@Test
+    public void testInavlidErrorFullRegistration()
+    {
+		
+		page.fillUpSignUpPageFields("", "", "", "", "");
+		WebDriverWait wait  =  new WebDriverWait(page.driver, Duration.ofSeconds(8));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".ids-heading-1")));
+		assertEquals(page.driver.findElement(By.cssSelector(".ids-heading-1")).isDisplayed(), true);
+    }
+	
+	@Test
+	public void testPasswordMismatch()
+	{
+		page.fillUpSignUpPageFields("arpita", "mohanty", "abcd@gmail.com", "1234@sapi", "sat@1236");
+		assertEquals(page.driver.findElement(By.cssSelector(".ids-heading-1")).isDisplayed(), true);
+		String actual=page.driver.findElement(By.id("passwordConfirm.errors")).getText();
+		String expected="Must match the password";
+		assertEquals(actual, expected);
+		
+	}
+	
+	
+	
 	@AfterMethod
 	 public void closeDriver()
 	 {

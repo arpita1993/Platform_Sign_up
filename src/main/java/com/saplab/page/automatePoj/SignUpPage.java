@@ -57,7 +57,7 @@ public class SignUpPage {
 	public void enterMailId(String mail)
 	{
 		EmailId.sendKeys(mail);
-	}
+	}    
 	public void passWord(String newPasswordInput)
 	{
 		newPassword.sendKeys(newPasswordInput);
